@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+<body style="background: url('/uploads/4/documentos/bg-3.jpg') no-repeat 0 0 transparent;font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: 13px;width: 757px; height: 1080px;  position:relative; padding-top: 260px;">
+<div style="width: 760px; position: relative;">
+ <div style="width: 650px; margin: 0 auto;">
+
+                <script type="text/php">
+                    if ( isset($pdf) ) {
+                        $footer = $pdf->open_object();
+                        $text = "{PAGE_NUM}";
+                        $w = $pdf->get_width();
+                        $h = $pdf->get_height();
+                        $font   = Font_Metrics::get_font("oldenglish", "normal");
+                        $t1     = "International Defensive Shooting Confederation";
+                        $t2     = "ConfederaÃ§Ã£o Brasileira de Tiro Defensivo e CaÃ§a";
+                        $t3     = "DeclaraÃ§Ã£o de InscriÃ§Ã£o em Entidade de Tiro Desportivo e CaÃ§a";
+                        $size   = "20px";
+                        $width  = Font_Metrics::get_text_width($t1, $font, $size);
+                        $width2 = Font_Metrics::get_text_width($t2, $font, $size);
+                        $width3 = Font_Metrics::get_text_width($t3, $font, $size);
+                        $left = ($w/2.0) - ($width / 2.0);
+                        $left2 = ($w/2.0) - ($width2 / 2.0);
+                        //$left3 = ($w/2.0) - ($width3 / 2.0);
+                        $pdf->page_text($left, 150, $t1, $font, 20, array(0,0,0));
+                        $pdf->page_text($left2, 170, $t2, $font, 20, array(0,0,0));
+                        //$pdf->page_text($left3, 210, $t3, $font, 20, array(0,0,0));
+                        $pdf->line($left2,195,$width2+$left2,195,array(0,0,0),1);
+                        $font = Font_Metrics::get_font("dejavu sans light", "normal");
+                        $arial10 = Font_Metrics::get_font("helvetica", "normal");
+                        $sizetextqr = "9px";
+                        $textqr = "Consulta de autenticidade via leitor de QR Code - CR: 123456";
+                        $textqrw = Font_Metrics::get_text_width($textqr, $arial10, $sizetextqr);
+    
+                        $pdf->page_text(53, 782, "PÃGINA: {PAGE_NUM} de {PAGE_COUNT} - YYYY.YYYY.YYYY", $font, 11, array(.31,.31,.31));
+                        // Add header image
+                        $img_w = 2 * 72; // 2 inches, in points
+                        $img_h = 1 * 72; // 1 inch, in points -- change these as required
+                        $a = $w / 2.0;
+                        
+                        $pdf->image("uploads/4/documentos/docheader.png", 0, 50, 0, $img_w, $img_h);
+                        
+                    $pdf->page_text((($w/2.0) - ($textqrw / 2.0)), 690, $textqr, $arial10, $sizetextqr, array(0,0,0));
+                        // Close the object (stop capture)
+                        $pdf->close_object();
+                        // Add the object to every page. You can
+                        // also specify "odd" or "even"
+                        $pdf->add_object($footer, "all");
+                    }
+                </script><h1 style="text-align: center;">Declaração de Inscrição em Entidade de Tiro Desportivo e Caça</h1>
+<p style="text-align: justify;">A Confederação Brasileira de Tiro Defensivo e Caça, inscrita no CNPJ/MF sob o nº. 22.222.222/2222-2 e Certificado de Registro nº. 123456, com sede na Alameda da alameda, 666, sala 666, SS, Vale do Vale, CEP 66.666-666, Nova Cidade-MG, DECLARA para fim de comprovação junto ao Exército Brasileiro, que <strong>Administrador Brasil</strong>, CPF nº 000.000.000-00, está regularmente inscrito nesta Entidade sob o nº MG6.666.666.666, datado de 01/01/2086, com inscrição até 01/01/2147.</p>
+<p style="text-align: justify;">Esta declaração tem validade de 90 (noventa) dias.</p>
+<p style="text-align: justify;">Código de autenticidade desta declaração: <strong>YYYY.YYYY.YYYY</strong></p>
+<p style="text-align: justify;">A autenticidade desta declaração poderá ser confirmada na Internet, no endereço eletrônico: <strong>http://endereco/documentos</strong></p>
+<p style="text-align: right;">Nova Cidade, MG, 26 de Agosto de 2086, &agrave;s 16h38m45s.</p>
+<div style="text-align: center;"><br><br><div class="footer">
+                                <img src="uploads/4/documentos/signature-nobg.png" alt="" />
+                                <div style="font-family: 'Calibri',Arial,helvetica,sans-serif; font-size: 14px; font-weight: bold; text-align: center;"><strong>JOAO CESAR DE OLIVEIRA</strong><br> 
+                                Presidente da presidencia Brasileira de Tiro Defensivo e Caça
+                                </div>
+                                <div style="position: fixed; width: 260px; right: 50px; bottom:180px; font-family: 'Calibri',Arial,helvetica,sans-serif; font-size: 10px; text-align: justify;"><p style="text-align: justify;"><span style="color: #ff0000;">Aviso: Constitui direito dos atiradores o porte de trânsito de uma arma de porte municiada nas condições previstas na legislação (Art. 24 da Lei 10.826/03, Art. 30 do Decreto 5.123/04 e Art. 135-A da Portaria 051-COLOG). Violações ao direito de ir e vir dos atletas amparados pela legislação supracitada configuram crime de abuso de autoridade (Lei 4.898/65). </span></p>
+<p>www.site.com.br - atendimento@site.com.br - (99) 9999-9999</p></div> 
+                           </div><span><br></span></div></div></div><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                                    <style>
+                                        @page {margin: 2mm 2.5mm;}
+                                        body {margin: 2mm 2.5mm; padding-bottom: 200px;}
+                                        h3.paging {bottom: -30px !important;}
+                                        .footer {position: relative; text-align: center;}
+                                        img {width: 200px; margin-bottom: -30px;}
+                                        table {
+                                            border-top: none !important;
+                                            border-right: 1px solid #000;
+                                            border-bottom: 1px solid #000;
+                                            border-left: 1px solid #000;
+                                            border-collapse: collapse;
+                                            margin-bottom: 20px;
+                                        }
+                                        table th {
+                                            background-color: #ccc;
+                                        }
+                                        table th, table td {
+                                            border: 1px solid #000;
+                                            padding: 2px 3px !important;
+                                        }
+                                        p {text-align: justify;}
+                                        h1 { text-align: center; font-family: 'oldenglish'; font-weight: normal; font-size: 30px;}
+                                    </style>
+                                </body></html>

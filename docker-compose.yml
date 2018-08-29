@@ -1,0 +1,9 @@
+version: '3'
+services:
+  webpdf:
+    build: .
+    ports:
+        - "8484:80"
+    hostname: dompdf
+    volumes:
+        - ./:/var/www/html
